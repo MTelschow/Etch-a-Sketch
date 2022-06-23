@@ -61,6 +61,11 @@ button {
     border-color: rgb(64, 64, 64);
 }
 
+.active {
+    color:#eee;
+    background-color: rgb(64, 64, 64);
+}
+
 .range{
     display: flex;
     flex-direction: column;
