@@ -1,4 +1,5 @@
 const drawingField = document.getElementById('drawingField');
+let pixels = document.querySelectorAll('.pixel');
 let sizeInput = document.getElementById('sizeInput');
 let sizeValue = document.getElementById('sizeValue');
 let size = sizeInput.value;
@@ -56,7 +57,9 @@ colorInput.oninput = function(){
     }
 }
 
-
+function randomColor(){
+    color = '#'+(Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+}
 
 
 //Creat Drawing Field or change the size
@@ -69,12 +72,14 @@ function createDrawingField (size) {
         pixel.classList.add('pixel');
         changePixelSize(pixel, size);
         drawingField.appendChild(pixel);
+        pixels = document.querySelectorAll('.pixel');
+        
     }
 }
 
 function removePixels(){
-    const pixels = document.querySelectorAll('.pixel');
-    for(instace of pixels){
+    const removePixels = document.querySelectorAll('.pixel');
+    for(instace of removePixels){
         drawingField.removeChild(instace);
     }
 }
@@ -84,3 +89,20 @@ function changePixelSize(pixel, size){
     pixel.style.width = width;
     pixel.style.height = width;
 }
+
+
+//Hover effect
+
+drawingField.addEventListener('mouseover', e => {
+    if (randomMode.classList.contains('active')){
+        randomColor();
+    }
+    e.target.style.backgroundColor = color; 
+})
+
+//Change pixel color
+// drawingField.onclick = e => {
+//     e.target.style.backgroundColor = color; 
+//     console.log(e.target);
+//     console.log(color);
+// } 
