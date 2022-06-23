@@ -66,6 +66,8 @@ button {
     background-color: rgb(64, 64, 64);
 }
 
+
+
 .range{
     display: flex;
     flex-direction: column;
@@ -82,8 +84,20 @@ button {
     box-shadow: 0 0 0 2px rgb(0 0 0 / 5%);
 }
 
+.drawingField {
+    display: flex;
+    flex-wrap: wrap;
+}
+.drawingField div {
+    margin: 0%;
+    padding: 0%;
+    border: 1px;
+    border-style: solid; 
+    box-sizing: border-box;
+}
+
 footer {
-    height: 5vw;
+    height: 3vw;
     display: flex;
     align-items:center;
     justify-content:center;
