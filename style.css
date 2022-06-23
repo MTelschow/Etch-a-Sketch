@@ -10,6 +10,11 @@ body {
     color: rgb(64, 64, 64);
 }
 
+a, u {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+  }
+
 header{
     display: flex;
     align-items:center;
@@ -29,6 +34,11 @@ h1{
     align-items: center;
     flex-wrap: wrap-reverse;
   }
+
+button,
+input {
+    cursor: pointer;
+}
 
 .inputs,
 .buttons,
@@ -97,10 +107,18 @@ button {
     background-color: blueviolet; */
 }
 
-footer {
-    height: 3vw;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    font-size: larger;
-  }
+footer{
+    text-align: center;
+    font-size: 25px;
+    bottom: 10px;
+    justify-content: center;
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+  #gh-logo{
+    width: 35px;
+    height: 35px;
+    margin-bottom: -9px;
+    margin-right: 10px;
+}
