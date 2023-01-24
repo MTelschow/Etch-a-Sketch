@@ -39,6 +39,8 @@ randomMode.addEventListener('click', function(){
 })
 colorMode.addEventListener('click', function(){
     toggleButton(colorMode);
+    color = colorInput.value;
+    
 })
 
 function toggleButton (button){
